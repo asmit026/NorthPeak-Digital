@@ -1,0 +1,99 @@
+.footer {
+  background: var(--color-on-background);
+  color: var(--color-surface-container-lowest);
+  width: 100%;
+  padding: clamp(48px, 8vw, 80px) var(--grid-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-top: var(--border-width) solid var(--color-on-background);
+  box-sizing: border-box;
+}
+
+.footer__brand {
+  color: var(--color-primary-container);
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.footer__social {
+  width: 100%;
+  border-top: 1px solid rgba(249, 249, 249, 0.2);
+  padding-top: 32px;
+}
+
+.footer__social-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 380px) {
+  .footer__social-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__social-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+}
+
+.footer__social-link {
+  color: var(--color-surface-container-lowest);
+  transition: color 0.15s ease;
+  display: inline-block;
+}
+
+.footer__social-link:hover {
+  color: var(--color-primary-fixed-dim);
+}
+
+.footer__social-link--highlighted {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-container);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+}
+
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px dashed rgba(249, 249, 249, 0.15);
+  padding-top: 24px;
+}
+
+@media (min-width: 640px) {
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer__copy {
+  color: var(--color-on-secondary-fixed-variant);
+}
+
+.footer__training {
+  color: var(--color-surface-variant);
+}
+
+.footer__training-link {
+  color: var(--color-primary-container);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.footer__training-link:hover {
+  color: var(--color-primary-fixed-dim);
+}

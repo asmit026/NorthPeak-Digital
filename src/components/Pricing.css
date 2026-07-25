@@ -1,0 +1,114 @@
+.pricing {
+  padding: clamp(48px, 8vw, 96px) var(--grid-margin);
+  background-color: var(--color-surface-container);
+}
+
+.pricing__header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.pricing__subtitle {
+  color: var(--color-on-surface-variant);
+  margin-top: 12px;
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 4vw, 40px);
+}
+
+@media (min-width: 1024px) {
+  .pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricing__card {
+  padding: clamp(24px, 5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing__card--default {
+  background: white;
+}
+
+.pricing__card--featured {
+  background: var(--color-primary-container);
+}
+
+@media (min-width: 1024px) {
+  .pricing__card--featured {
+    transform: translateY(-24px);
+  }
+}
+
+.pricing__badge {
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  background: var(--color-on-background);
+  color: var(--color-primary-container);
+  padding: 4px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pricing__tier-name {
+  margin-bottom: 8px;
+}
+
+.pricing__price {
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.pricing__period {
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 400;
+}
+
+.pricing__features {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing__feature {
+  padding: 14px 0;
+  border-top: 2px solid var(--color-on-background);
+}
+
+.pricing__cta {
+  margin-top: clamp(24px, 4vw, 48px);
+  width: 100%;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pricing__cta--default {
+  background: white;
+  border: var(--border-width) solid var(--color-on-background);
+  color: var(--color-on-background);
+}
+
+.pricing__cta--default:hover {
+  background: var(--color-on-background);
+  color: white;
+}
+
+.pricing__cta--featured {
+  background: var(--color-on-background);
+  color: var(--color-primary-container);
+  border: none;
+}
+
+.pricing__cta--featured:hover {
+  transform: scale(0.95);
+}

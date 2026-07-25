@@ -1,0 +1,124 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: var(--color-background);
+  border-bottom: var(--border-width) solid var(--color-on-background);
+  box-shadow: var(--hard-shadow-offset) var(--hard-shadow-offset) 0px 0px var(--color-on-background);
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px var(--grid-margin);
+  gap: 16px;
+}
+
+.navbar__logo {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-on-background);
+  white-space: nowrap;
+  font-size: clamp(18px, 4vw, 32px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar__links--desktop {
+  display: none;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 840px) {
+  .navbar__links--desktop {
+    display: flex;
+  }
+}
+
+.navbar__link {
+  color: var(--color-on-background);
+  transition: transform 0.15s ease;
+}
+
+.navbar__link:not(.active-nav-bg):hover {
+  transform: translate(4px, 4px);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__cta {
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .navbar__cta {
+    padding: 8px 24px;
+  }
+}
+
+.navbar__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: var(--border-width) solid var(--color-on-background);
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px 0px var(--color-on-background);
+}
+
+.navbar__toggle:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0;
+}
+
+@media (min-width: 840px) {
+  .navbar__toggle {
+    display: none;
+  }
+}
+
+/* Mobile Drawer */
+.navbar__mobile-menu {
+  background-color: var(--color-background);
+  border-top: var(--border-width) solid var(--color-on-background);
+  padding: 24px var(--grid-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 840px) {
+  .navbar__mobile-menu {
+    display: none;
+  }
+}
+
+.navbar__mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navbar__mobile-link {
+  color: var(--color-on-background);
+  display: block;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar__mobile-link--active {
+  color: var(--color-primary-container);
+  background: var(--color-on-background);
+  padding-left: 12px;
+}
