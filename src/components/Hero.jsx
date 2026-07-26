@@ -1,16 +1,12 @@
 import './Hero.css'
+import { LuTerminal } from "react-icons/lu";
 
 export default function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-heading">
       {/* Background Decoration */}
       <div className="hero__decoration" aria-hidden="true">
-        <span
-          className="material-symbols-outlined"
-          style={{ fontSize: '300px', fontVariationSettings: "'FILL' 1" }}
-        >
-          terminal
-        </span>
+        <LuTerminal size={300} />
       </div>
 
       <div className="hero__content">
