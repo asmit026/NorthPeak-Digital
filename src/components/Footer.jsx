@@ -31,7 +31,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <small className="footer__copy text-label-mono">
-          ©2024 NORTHPEAK DIGITAL. BUILT DIFFERENT.
+          ©2026 NORTHPEAK DIGITAL. BUILT DIFFERENT.
         </small>
         <p className="footer__training text-label-mono">
           Built for{' '}
