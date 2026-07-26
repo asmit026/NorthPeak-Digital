@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Navbar.css'
+import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'SERVICES', href: '#services', active: true },
@@ -51,9 +52,11 @@ export default function Navbar() {
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle menu"
           >
-            <span className="material-symbols-outlined" aria-hidden="true">
-              {mobileMenuOpen ? 'close' : 'menu'}
-            </span>
+            {mobileMenuOpen ? (
+              <X aria-hidden="true" />
+            ) : (
+              <Menu aria-hidden="true" />
+            )}
           </button>
         </div>
       </nav>
@@ -67,9 +70,8 @@ export default function Navbar() {
                 <a
                   href={href}
                   onClick={closeMenu}
-                  className={`text-headline-md uppercase navbar__mobile-link ${
-                    active ? 'navbar__mobile-link--active' : ''
-                  }`}
+                  className={`text-headline-md uppercase navbar__mobile-link ${active ? 'navbar__mobile-link--active' : ''
+                    }`}
                 >
                   {label}
                 </a>

@@ -31,9 +31,6 @@ export default function Testimonials() {
             className={`testimonials__item testimonials__item--${i === 0 ? 'first' : 'rest'}`}
           >
             <div className={`testimonials__inner testimonials__inner--${align}`}>
-              <span className="material-symbols-outlined testimonials__quote-icon" aria-hidden="true">
-                format_quote
-              </span>
               <blockquote className="testimonials__quote text-headline-lg-mobile uppercase">
                 &ldquo;{quote}&rdquo;
               </blockquote>

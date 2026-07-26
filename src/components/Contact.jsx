@@ -23,15 +23,13 @@ export default function Contact() {
           Ready to <br /> Break the <br /> Mold?
         </h2>
         <p className="contact__blurb text-body-lg">
-          Stop settling for template designs. Let&apos;s build something that actually leaves a mark.
+          Stop settling for template designs. Let&apos; build something that actually leaves a mark.
         </p>
         <address className="contact__address text-label-mono">
           <div className="contact__address-row">
-            <span className="material-symbols-outlined" aria-hidden="true">mail</span>
             <a href="mailto:hello@northpeak.digital">HELLO@NORTHPEAK.DIGITAL</a>
           </div>
           <div className="contact__address-row">
-            <span className="material-symbols-outlined" aria-hidden="true">location_on</span>
             GLOBAL / REMOTE
           </div>
         </address>
