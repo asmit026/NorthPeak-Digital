@@ -79,11 +79,11 @@
 }
 
 .footer__copy {
-  color: var(--color-surface-dim);
+  color: var(--color-on-secondary-fixed-variant);
 }
 
 .footer__training {
-  color: var(--color-surface-dim);
+  color: var(--color-surface-variant);
 }
 
 .footer__training-link {

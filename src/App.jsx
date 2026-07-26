@@ -1,13 +1,10 @@
-import { lazy, Suspense } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-
-// Lazy load below-the-fold components
-const Services = lazy(() => import('./components/Services'))
-const Testimonials = lazy(() => import('./components/Testimonials'))
-const Pricing = lazy(() => import('./components/Pricing'))
-const Contact = lazy(() => import('./components/Contact'))
-const Footer = lazy(() => import('./components/Footer'))
+import Services from './components/Services'
+import Testimonials from './components/Testimonials'
+import Pricing from './components/Pricing'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -15,16 +12,12 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Suspense fallback={<div style={{ minHeight: '100vh', background: 'var(--color-surface)' }}></div>}>
-          <Services />
-          <Testimonials />
-          <Pricing />
-          <Contact />
-        </Suspense>
+        <Services />
+        <Testimonials />
+        <Pricing />
+        <Contact />
       </main>
-      <Suspense fallback={null}>
-        <Footer />
-      </Suspense>
+      <Footer />
     </>
   )
 }
