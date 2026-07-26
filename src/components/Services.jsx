@@ -3,38 +3,32 @@ import './Services.css'
 const SERVICES = [
   {
     num: '01',
-    icon: 'strategy',
     title: 'STRATEGY',
     desc: "Deep-dive market analysis and architectural roadmaps. We define the 'Why' before the 'How'.",
   },
   {
     num: '02',
-    icon: 'code',
     title: 'DEV',
     desc: 'Hardened, scalable infrastructure built with modern stacks. Clean code, zero bloat, maximum performance.',
     variant: 'highlight',
   },
   {
     num: '03',
-    icon: 'brush',
     title: 'DESIGN',
     desc: "Brutal aesthetics meet precise UI engineering. Designs that don't just look good—they work.",
   },
   {
     num: '04',
-    icon: 'trending_up',
     title: 'GROWTH',
     desc: 'Aggressive optimization strategies to scale your user base and revenue through data-backed moves.',
   },
   {
     num: '05',
-    icon: 'edit_note',
     title: 'CONTENT',
     desc: 'High-impact narrative design and visual storytelling that positions your brand as a market leader.',
   },
   {
     num: '06',
-    icon: 'database',
     title: 'DATA',
     desc: 'Custom analytics and business intelligence pipelines to see what your competitors are missing.',
     variant: 'dark',
